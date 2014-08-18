@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTaxBySalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="salary" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxBySalaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTaxBySalaryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTaxBySalarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxBySalary" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxBySalarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxBySalaryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TaxServiceSoap">
+    <wsdl:operation name="GetTaxBySalary">
+      <wsdl:input message="tns:GetTaxBySalarySoapIn" />
+      <wsdl:output message="tns:GetTaxBySalarySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TaxServiceSoap" type="tns:TaxServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTaxBySalary">
+      <soap:operation soapAction="http://tempuri.org/GetTaxBySalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TaxServiceSoap12" type="tns:TaxServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTaxBySalary">
+      <soap12:operation soapAction="http://tempuri.org/GetTaxBySalary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TaxService">
+    <wsdl:port name="TaxServiceSoap" binding="tns:TaxServiceSoap">
+      <soap:address location="http://localhost:14385/TaxService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TaxServiceSoap12" binding="tns:TaxServiceSoap12">
+      <soap12:address location="http://localhost:14385/TaxService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

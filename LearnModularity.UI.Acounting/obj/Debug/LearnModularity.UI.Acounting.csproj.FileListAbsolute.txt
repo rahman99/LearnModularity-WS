@@ -1,0 +1,5 @@
+E:\Research\CSharp\LearnModularity\LearnModularity.UI.Acounting\bin\Debug\LearnModularity.UI.Acounting.dll
+E:\Research\CSharp\LearnModularity\LearnModularity.UI.Acounting\bin\Debug\LearnModularity.UI.Acounting.pdb
+E:\Research\CSharp\LearnModularity\LearnModularity.UI.Acounting\obj\Debug\ResolveAssemblyReference.cache
+E:\Research\CSharp\LearnModularity\LearnModularity.UI.Acounting\obj\Debug\LearnModularity.UI.Acounting.dll
+E:\Research\CSharp\LearnModularity\LearnModularity.UI.Acounting\obj\Debug\LearnModularity.UI.Acounting.pdb

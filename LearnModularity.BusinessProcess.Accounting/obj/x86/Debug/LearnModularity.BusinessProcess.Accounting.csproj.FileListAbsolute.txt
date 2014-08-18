@@ -1,0 +1,5 @@
+E:\Research\CSharp\LearnModularity\LearnModularity.BusinessProcess.Accounting\bin\Debug\LearnModularity.BusinessProcess.Accounting.dll
+E:\Research\CSharp\LearnModularity\LearnModularity.BusinessProcess.Accounting\bin\Debug\LearnModularity.BusinessProcess.Accounting.pdb
+E:\Research\CSharp\LearnModularity\LearnModularity.BusinessProcess.Accounting\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Research\CSharp\LearnModularity\LearnModularity.BusinessProcess.Accounting\obj\x86\Debug\LearnModularity.BusinessProcess.Accounting.dll
+E:\Research\CSharp\LearnModularity\LearnModularity.BusinessProcess.Accounting\obj\x86\Debug\LearnModularity.BusinessProcess.Accounting.pdb
